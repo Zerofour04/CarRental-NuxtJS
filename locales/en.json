@@ -1,0 +1,21 @@
+{
+    "welcome": "Welcome",
+    "about": "About",
+    "contact": "Contact",
+    "greeting": "Hello, welcome to our website!",
+    "home": {
+      "title": "Welcome to our Homepage",
+      "description": "Discover our amazing offerings",
+      "cta": "Learn more"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "We are an innovative company",
+      "mission": "Our mission is to provide excellent solutions",
+      "team": "Our Team"
+    },
+    "footer": {
+        "copyright": "© 2023 My Website. All rights reserved."
+    } 
+  }
+  
