@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ids",
+  "info": {
+    "singularName": "id",
+    "pluralName": "ids",
+    "displayName": "cars"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Test": {
+      "type": "string"
+    }
+  }
+}

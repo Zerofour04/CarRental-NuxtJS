@@ -8,8 +8,6 @@
 
   
   <script>
-  export default {
-    // Hier kannst du Logik für die Startseite hinzufügen
-  }
+
   </script>
   

@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div>
     
     <h1>{{ $t('about.title') }}</h1>
     <p>{{ $t('about.description') }}</p>
@@ -9,8 +9,5 @@
 </template>
 
   <script>
-  export default {
-    // Hier kannst du Logik für die Über uns-Seite hinzufügen
-  }
   </script>
   
