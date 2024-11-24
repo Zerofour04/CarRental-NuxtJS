@@ -369,12 +369,53 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiIdId extends Struct.CollectionTypeSchema {
-  collectionName: 'ids';
+export interface ApiCarCar extends Struct.CollectionTypeSchema {
+  collectionName: 'cars';
   info: {
+    description: '';
     displayName: 'cars';
-    pluralName: 'ids';
-    singularName: 'id';
+    pluralName: 'cars';
+    singularName: 'car';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Baujahr: Schema.Attribute.String;
+    Bild: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Fahrzeugklasse: Schema.Attribute.String;
+    Fahrzeugname: Schema.Attribute.String;
+    Getriebe: Schema.Attribute.String;
+    Kofferraumvolumen: Schema.Attribute.String;
+    Kraftstoffart: Schema.Attribute.Enumeration<
+      ['Benzin', 'Diesel', 'Elektro']
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::car.car'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    Sitzplatz: Schema.Attribute.Integer;
+    Tagesmiete: Schema.Attribute.Decimal;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Verfuegbarkeit: Schema.Attribute.Boolean;
+  };
+}
+
+export interface ApiTestTest extends Struct.CollectionTypeSchema {
+  collectionName: 'tests';
+  info: {
+    description: '';
+    displayName: 'test';
+    pluralName: 'tests';
+    singularName: 'test';
   };
   options: {
     draftAndPublish: true;
@@ -384,10 +425,10 @@ export interface ApiIdId extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::id.id'> &
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::test.test'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    Test: Schema.Attribute.String;
+    TextField: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -903,7 +944,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::id.id': ApiIdId;
+      'api::car.car': ApiCarCar;
+      'api::test.test': ApiTestTest;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

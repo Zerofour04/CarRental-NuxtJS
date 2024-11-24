@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "cars",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Fahrzeugname": {
+      "type": "string"
+    },
+    "Fahrzeugklasse": {
+      "type": "string"
+    },
+    "Baujahr": {
+      "type": "string"
+    },
+    "Getriebe": {
+      "type": "string"
+    },
+    "Kofferraumvolumen": {
+      "type": "string"
+    },
+    "Tagesmiete": {
+      "type": "decimal"
+    },
+    "Verfuegbarkeit": {
+      "type": "boolean"
+    },
+    "Kraftstoffart": {
+      "type": "enumeration",
+      "enum": [
+        "Benzin",
+        "Diesel",
+        "Elektro"
+      ]
+    },
+    "Sitzplatz": {
+      "type": "integer"
+    },
+    "Bild": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

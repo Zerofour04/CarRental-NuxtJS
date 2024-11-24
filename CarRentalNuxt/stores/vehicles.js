@@ -2,32 +2,24 @@ import { defineStore } from 'pinia'
 
 export const useVehicleStore = defineStore('vehicles', {
   state: () => ({
-    vehicles: [
-      {
-        id: 1,
-        brand: 'BMW',
-        model: 'X5',
-        year: 2023,
-        price: 120,
-        available: true,
-      }
-    ]
+    vehicles: [],
+    loading: false,
+    error: null
   }),
+  
   actions: {
-    rentVehicle(vehicleId) {
-      const vehicle = this.vehicles.find(v => v.id === vehicleId)
-      if (vehicle) {
-        vehicle.available = false
-      }
-    },
-    returnVehicle(vehicleId) {
-      const vehicle = this.vehicles.find(v => v.id === vehicleId)
-      if (vehicle) {
-        vehicle.available = true
+    async fetchVehicles() {
+      this.loading = true
+      try {
+        const response = await fetch('http://localhost:1337/api/cars')
+        const result = await response.json()
+        this.vehicles = result.data
+        console.log('Loaded vehicles:', this.vehicles)
+      } catch (err) {
+        console.error('Error loading vehicles:', err)
+      } finally {
+        this.loading = false
       }
     }
-  },
-  getters: {
-    availableVehicles: (state) => state.vehicles.filter(v => v.available)
   }
 })

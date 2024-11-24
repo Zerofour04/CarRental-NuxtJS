@@ -1,28 +1,28 @@
 <template>
-    <v-card>
-      <v-card-title>{{ vehicle.brand }} {{ vehicle.model }}</v-card-title>
+  <div>
+    <v-card v-if="currentVehicle">
+      <v-card-title>{{ currentVehicle.Fahrzeugname }}</v-card-title>
       <v-card-text>
-        <div>Baujahr: {{ vehicle.year }}</div>
-        <div>Preis pro Tag: {{ vehicle.price }}€</div>
-        <div>Status: {{ vehicle.available ? 'Verfügbar' : 'Vermietet' }}</div>
+        <div>Baujahr: {{ currentVehicle.Baujahr }}</div>
+        <div>Fahrzeugklasse: {{ currentVehicle.Fahrzeugklasse }}</div>
+        <div>Kraftstoffart: {{ currentVehicle.Kraftstoffart }}</div>
+        <div>Getriebe: {{ currentVehicle.Getriebe || 'Nicht angegeben' }}</div>
+        <div>Sitzplätze: {{ currentVehicle.Sitzplatz || 'Nicht angegeben' }}</div>
+        <div>Kofferraum: {{ currentVehicle.Kofferraumvolumen || 'Nicht angegeben' }}</div>
+        <div>Preis pro Tag: {{ currentVehicle.Tagesmiete || 'Nicht angegeben' }}€</div>
+        <div>Status: {{ currentVehicle.Verfuegbarkeit ? 'Verfügbar' : 'Nicht verfügbar' }}</div>
       </v-card-text>
-      <v-card-actions>
-        <v-btn 
-          :color="vehicle.available ? 'primary' : 'error'"
-          @click="handleRent"
-        >
-          {{ vehicle.available ? 'Jetzt mieten' : 'Vermietet' }}
-        </v-btn>
-      </v-card-actions>
     </v-card>
-  </template>
-  
-  <script setup>
-  const vehicleStore = useVehicleStore()
-  const vehicle = vehicleStore.vehicles[0]
-  
-  const handleRent = () => {
-    vehicleStore.rentVehicle(vehicle.id)
-  }
-  </script>
-  
+    <v-progress-circular v-else indeterminate></v-progress-circular>
+  </div>
+</template>
+
+<script setup>
+const vehicleStore = useVehicleStore()
+
+onMounted(() => {
+  vehicleStore.fetchVehicles()
+})
+
+const currentVehicle = computed(() => vehicleStore.vehicles[0])
+</script>

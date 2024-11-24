@@ -1,17 +1,18 @@
 {
   "kind": "collectionType",
-  "collectionName": "ids",
+  "collectionName": "tests",
   "info": {
-    "singularName": "id",
-    "pluralName": "ids",
-    "displayName": "cars"
+    "singularName": "test",
+    "pluralName": "tests",
+    "displayName": "test",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Test": {
+    "TextField": {
       "type": "string"
     }
   }
