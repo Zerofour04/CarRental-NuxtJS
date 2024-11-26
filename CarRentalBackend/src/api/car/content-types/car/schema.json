@@ -15,13 +15,7 @@
     "Fahrzeugname": {
       "type": "string"
     },
-    "Fahrzeugklasse": {
-      "type": "string"
-    },
     "Baujahr": {
-      "type": "string"
-    },
-    "Getriebe": {
       "type": "string"
     },
     "Kofferraumvolumen": {
@@ -38,21 +32,52 @@
       "enum": [
         "Benzin",
         "Diesel",
-        "Elektro"
+        "Elektro",
+        "Hybrid"
       ]
     },
     "Sitzplatz": {
       "type": "integer"
     },
     "Bild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "Getriebe": {
+      "type": "enumeration",
+      "enum": [
+        "Schaltgetriebe",
+        "Automatik"
+      ]
+    },
+    "Fahrzeugklasse": {
+      "type": "enumeration",
+      "enum": [
+        "Kleinwagen",
+        "Kompaktklasse",
+        "Mittelklasse",
+        "Oberklasse",
+        "SUV",
+        "Van",
+        "Cabrio",
+        "Transporter"
+      ]
+    },
+    "BildURL": {
+      "type": "string"
+    },
+    "Farbe": {
+      "type": "string"
+    },
+    "Kilometerbegrenzung": {
+      "type": "string"
     }
   }
 }
