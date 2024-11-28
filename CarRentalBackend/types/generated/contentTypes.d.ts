@@ -388,28 +388,24 @@ export interface ApiCarCar extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Fahrzeugklasse: Schema.Attribute.Enumeration<
-      [
-        'Kleinwagen',
-        'Kompaktklasse',
-        'Mittelklasse',
-        'Oberklasse',
-        'SUV',
-        'Van',
-        'Cabrio',
-        'Transporter',
-      ]
+      ['SUV', 'Limousine', 'Sportwagen', 'Kombi']
     >;
     Fahrzeugname: Schema.Attribute.String;
-    Farbe: Schema.Attribute.String;
+    Farbe: Schema.Attribute.Enumeration<
+      ['Schwarz', 'Wei\u00DF', 'Silber', 'Bunt']
+    >;
     Getriebe: Schema.Attribute.Enumeration<['Schaltgetriebe', 'Automatik']>;
     Kilometerbegrenzung: Schema.Attribute.String;
-    Kofferraumvolumen: Schema.Attribute.String;
+    Kofferraumvolumen: Schema.Attribute.Enumeration<
+      ['Klein', 'Mittel', 'Gro\u00DF']
+    >;
     Kraftstoffart: Schema.Attribute.Enumeration<
       ['Benzin', 'Diesel', 'Elektro', 'Hybrid']
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::car.car'> &
       Schema.Attribute.Private;
+    PS: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     Sitzplatz: Schema.Attribute.Integer;
     Tagesmiete: Schema.Attribute.Decimal;

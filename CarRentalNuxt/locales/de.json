@@ -1,21 +1,50 @@
 {
-    "welcome": "RentMyCar",
-    "about": "Über uns",
-    "contact": "Kontakt",
-    "greeting": "Hallo, willkommen auf unserer Website!",
-    "home": {
-      "title": "Willkommen auf unserer Startseite",
-      "description": "Entdecken Sie unsere fantastischen Angebote",
-      "cta": "Mehr erfahren"
+  "welcome": "RentMyCar",
+  "about": "Über uns",
+  "contact": "Kontakt",
+  "greeting": "Hallo, willkommen auf unserer Website!",
+  "home": {
+    "title": "Startseite",
+    "description": "Entdecken Sie unsere tollen Angebote",
+    "cta": "Mehr erfahren"
+  },
+  "about": {
+    "title": "Über uns",
+    "description": "Wir sind ein innovatives Unternehmen",
+    "mission": "Unsere Mission ist es, exzellente Lösungen anzubieten",
+    "team": "Unser Team"
+  },
+  "vehicles": {
+    "seats": "Sitze",
+    "available": "Verfügbar",
+    "notAvailable": "Ausgebucht",
+    "perDay": "pro Tag",
+    "close": "Schließen",
+    "book": "Jetzt buchen",
+    "details": {
+      "year": "Baujahr",
+      "class": "Fahrzeugklasse",
+      "fuel": "Kraftstoffart",
+      "transmission": "Getriebe",
+      "seats": "Sitzplätze",
+      "trunk": "Kofferraum",
+      "horsepower": "PS",
+      "mileage": "Kilometerbegrenzung",
+      "notSpecified": "Nicht angegeben"
     },
-    "about": {
-      "title": "Über uns",
-      "description": "Wir sind ein innovatives Unternehmen",
-      "mission": "Unsere Mission ist es, erstklassige Lösungen anzubieten",
-      "team": "Unser Team"
-    },
-    "footer": {
-        "copyright": "© 2023 Meine Website. Alle Rechte vorbehalten."
+    "filter": {
+      "class": "Fahrzeugklasse",
+      "transmission": "Getriebe",
+      "seats": "Sitzplätze",
+      "fuel": "Kraftstoffart",
+      "trunk": "Kofferraum",
+      "availability": "Verfügbarkeit",
+      "available": "Verfügbar",
+      "notAvailable": "Nicht verfügbar",
+      "reset": "Filter zurücksetzen"
     }
+  },
+  "footer": {
+    "copyright": "© 2023 Meine Website. Alle Rechte vorbehalten."
   }
-  
+}

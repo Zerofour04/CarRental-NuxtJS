@@ -1,6 +1,11 @@
 <template>
   <div>
     <v-app-bar color="primary">
+      <v-img
+        src="http://localhost:1337/uploads/logo_search_grid_2x_ca831ce5c3.png"
+
+        contain
+      ></v-img>
       <v-app-bar-title>{{ $t('welcome') }}</v-app-bar-title>
 
       <v-container class="d-flex align-center">
@@ -21,10 +26,6 @@
         >
           {{ $i18n.locale === 'de' ? 'EN' : 'DE' }}
         </v-btn>
-        <button @click="switchLanguage" class="lang-button">
-          {{ $i18n.locale === 'de' ? 'EN' : 'DE' }}
-        </button>
-
         <v-btn color="info">
           Anmelden
         </v-btn>
