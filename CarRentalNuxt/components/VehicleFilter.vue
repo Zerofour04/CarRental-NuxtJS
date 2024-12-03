@@ -2,6 +2,7 @@
     <div class="filters pa-4">
         <v-card class="pa-4">
             <div class="d-flex flex-wrap gap-4">
+                
                 <div class="filter-container">
                     <v-select
                         v-model="store.filters.Fahrzeugklasse"

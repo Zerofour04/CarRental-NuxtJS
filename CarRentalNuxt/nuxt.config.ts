@@ -4,7 +4,7 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/i18n', 'vuetify-nuxt-module', '@pinia/nuxt'],
+  modules: ['@nuxtjs/i18n', 'vuetify-nuxt-module', '@pinia/nuxt', '@formkit/nuxt'],
   css: [
     'vuetify/lib/styles/main.sass',
     '@mdi/font/css/materialdesignicons.min.css'
@@ -30,6 +30,11 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['vuetify']
+  },
+  formkit: {    
+    autoImport: true,
+    defaultConfig: false,
+    configFile: './formkit.config.js'
   },
   vuetify: {
     theme: {
