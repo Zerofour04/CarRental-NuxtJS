@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cars",
+  "info": {
+    "singularName": "car",
+    "pluralName": "cars",
+    "displayName": "cars",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Fahrzeugname": {
+      "type": "string"
+    },
+    "Baujahr": {
+      "type": "string"
+    },
+    "Tagesmiete": {
+      "type": "decimal"
+    },
+    "Verfuegbarkeit": {
+      "type": "boolean"
+    },
+    "Kraftstoffart": {
+      "type": "enumeration",
+      "enum": [
+        "Benzin",
+        "Diesel",
+        "Elektro",
+        "Hybrid"
+      ]
+    },
+    "Sitzplatz": {
+      "type": "integer"
+    },
+    "Bild": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Getriebe": {
+      "type": "enumeration",
+      "enum": [
+        "Schaltgetriebe",
+        "Automatik"
+      ]
+    },
+    "Fahrzeugklasse": {
+      "type": "enumeration",
+      "enum": [
+        "SUV",
+        "Limousine",
+        "Sportwagen",
+        "Kombi"
+      ]
+    },
+    "BildURL": {
+      "type": "string"
+    },
+    "PS": {
+      "type": "integer"
+    },
+    "Kofferraumvolumen": {
+      "type": "enumeration",
+      "enum": [
+        "Klein",
+        "Mittel",
+        "Groß"
+      ]
+    },
+    "Farbe": {
+      "type": "enumeration",
+      "enum": [
+        "Schwarz",
+        "Weiß",
+        "Silber",
+        "Bunt"
+      ]
+    },
+    "Kilometerbegrenzung": {
+      "type": "string"
+    }
+  }
+}

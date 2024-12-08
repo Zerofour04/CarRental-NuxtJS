@@ -1,0 +1,50 @@
+{
+  "welcome": "RentMyCar",
+  "about": "About",
+  "contact": "Contact",
+  "greeting": "Hello, welcome to our website!",
+  "home": {
+    "title": "Home",
+    "description": "Discover our amazing offerings",
+    "cta": "Learn more"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are an innovative company",
+    "mission": "Our mission is to provide excellent solutions",
+    "team": "Our Team"
+  },
+  "vehicles": {
+    "seats": "Seats",
+    "available": "Available",
+    "notAvailable": "Booked",
+    "perDay": "per day",
+    "close": "Close",
+    "book": "Book now",
+    "details": {
+      "year": "Year",
+      "class": "Vehicle Class",
+      "fuel": "Fuel Type",
+      "transmission": "Transmission",
+      "seats": "Seats",
+      "trunk": "Trunk Size",
+      "horsepower": "Horsepower",
+      "mileage": "Mileage Limit",
+      "notSpecified": "Not specified"
+    },
+    "filter": {
+      "class": "Vehicle Class",
+      "transmission": "Transmission",
+      "seats": "Seats",
+      "fuel": "Fuel Type",
+      "trunk": "Trunk Size",
+      "availability": "Availability",
+      "available": "Available",
+      "notAvailable": "Not Available",
+      "reset": "Reset Filters"
+    }
+  },
+  "footer": {
+    "copyright": "© 2023 My Website. All rights reserved."
+  }
+}

@@ -1,0 +1,27 @@
+[data-theme="genesis"] {
+    --fk-color-primary: #3b82f6;
+    --fk-border-radius: 0.375rem;
+    --fk-font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .formkit-outer {
+    margin-bottom: 1rem;
+  }
+  
+  .formkit-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .formkit-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--fk-border-radius);
+  }
+  
+  .formkit-select {
+    min-width: 200px;
+  }
+  
