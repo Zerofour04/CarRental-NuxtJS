@@ -53,7 +53,7 @@ npm run dev
 npm run build
 ````
 
-### Backend
+### Backend - STRAPI
 ```bash
 # Go to the project directory
 cd CarRentalBackend
