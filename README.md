@@ -37,6 +37,10 @@ A sleek and modern car rental platform built with Nuxt 3, Vue 3, and Vuetify, of
 - Pinia
 - i18n
 
+## 🖼️ Images
+<img width="1148" alt="Bildschirmfoto 2025-04-15 um 17 21 30" src="https://github.com/user-attachments/assets/b022a709-1f1b-4d95-98bd-ab5baab877e5" />
+<img width="1470" alt="Bildschirmfoto 2025-04-15 um 17 21 04" src="https://github.com/user-attachments/assets/3684bcb4-6e4b-48c9-9b27-4b85ba7bca0d" />
+
 ## 📦 Installation
 ### Frontend
 ```bash
